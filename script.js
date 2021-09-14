@@ -60,3 +60,21 @@ let clone2 = {...obj};
 console.log(clone2);
 // this clone will not have been modified either
 
+//----------------------
+// another example
+//----------------------
+
+// what happens with an obj inside and obj?
+let obj = {
+    a: 'a',
+     b: 'b', 
+     c: {
+         deep: 'try and copy me'
+     }
+};
+
+obj.c.deep = 'hahaha';
+// lets try deep cloning with JSON
+let superClone = JSON.parse(JSON.stringify(obj));
+console.log(superClone);
+// this can cause performance issues if your object is too deep or the parent objects are too large
