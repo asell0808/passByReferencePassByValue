@@ -46,8 +46,17 @@ console.log(d);
 // arrays are objects, so c will have a changed value as well
 console.log(c);
 
+//----------------------
+// another example
+//----------------------
+let obj = {a: 'a', b: 'b', c: 'c'};
+let clone = Object.assign({}, obj);
 
+obj.c = 5;
+console.log(clone);
+// the cloned object was not affected because of Object.assign
 
-
-
+let clone2 = {...obj};
+console.log(clone2);
+// this clone will not have been modified either
 
