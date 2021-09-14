@@ -1,4 +1,3 @@
-
 // Pass by value vs Pass by Reference
 //----------------------
 //Pass by value
@@ -33,8 +32,19 @@ console.log(obj1);
 console.log(obj2);
 
 // this will change the password of obj1 and obj2 to have a value of easypeasy.
+// this is useful because it will save space in memory. 
+// the downside is that if code is not organized, a future change can ruin a program
 
+//----------------------
+// another example
+//----------------------
 
+var c = [1,2,3,4,5];
+var d = c;
+d.push(182138476123);
+console.log(d);
+// arrays are objects, so c will have a changed value as well
+console.log(c);
 
 
 
